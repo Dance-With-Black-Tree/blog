@@ -10,7 +10,7 @@ interface IPostListProps {
 
 export default function PostList({posts, limit}: IPostListProps) {
     return <div className={"grid grid-cols-4 gap-4"}>
-        {Object.values(posts).slice(0, limit || undefined).map((post, index) => {
+        {Object.values(posts).slice(0, limit || undefined).map((post, _index) => {
             return (
                 <Link href={`/post/${post.id}`} key={post.id}>
                     <PostItem post={post}/>
@@ -19,4 +19,3 @@ export default function PostList({posts, limit}: IPostListProps) {
         })}
     </div>;
 }
-

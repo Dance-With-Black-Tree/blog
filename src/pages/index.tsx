@@ -10,7 +10,7 @@ import { mockData, iPost } from "@mocks/data";
 import styles from "@styles/Home.module.css";
 
 export default function Home() {
-    const postData: iPost[] = Object.values(mockData)
+    const postData: iPost[] = mockData
 
     return (
         <div >
