@@ -5,9 +5,13 @@ import Link from "next/link";
 import CommonLayout from "@components/common/CommonLayout";
 import PostList from "@components/post/PostList";
 
+import { mockData, iPost } from "@mocks/data";
+
 import styles from "@styles/Home.module.css";
 
 export default function Home() {
+    const postData: iPost[] = Object.values(mockData)
+
     return (
         <div className={styles.container}>
             <CommonLayout>
@@ -23,7 +27,7 @@ export default function Home() {
                 </div>
                 <div>
                     <h2 className="text-3xl font-bold">Recent Posts</h2>
-                    <PostList/>
+                    <PostList posts={mockData}/>
                 </div>
             </CommonLayout>
         </div>

@@ -1,16 +1,19 @@
 import Link from "next/link";
-import { mockData } from "@mocks/data";
 
-export default function PostList() {
+import PostItem from "@components/post/PostItem";
+
+import { mockData, iPost } from "@mocks/data";
+
+interface IPostListProps {
+    posts: iPost[]
+}
+
+export default function PostList({posts}: IPostListProps) {
     return <div className="grid-cols-4">
-        {Object.keys(mockData).map((value,index)=>{
+        {Object.values(posts).map((post, _index)=>{
             return (
-                <Link href={`/post/${value}`} key={value}>
-                    <div className="bg-black w-10 h-10 rounded-full ">
-                        <h3 >{mockData[value].title}</h3>
-                        <h4 className="bg-orange-500">설명</h4>
-                        <span>이미지</span>
-                    </div>
+                <Link href={`/post/${post.id}`} key={post.id}>
+                    <PostItem post={post}/>
                 </Link>)
         })}
     </div>

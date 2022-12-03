@@ -1,30 +1,15 @@
-import { useState, useEffect } from "react"
-import {mockData} from "@mocks/data"
+import { useState, useEffect } from "react";
+import { mockData } from "@mocks/data";
 
 interface ISearchBarProps {
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-  searchWord: string
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  searchValue: string;
 }
 
-export default function SearchBar({onChange, searchWord}: ISearchBarProps) {
-
-
-
-
+export default function SearchBar({ onChange, searchValue }: ISearchBarProps) {
     return (
         <form>
-            <input type="text" value={searchWord} onChange={onChange}></input>
-            <button>검색</button>
+            <input type="text" value={searchValue} onChange={onChange}></input>
         </form>
-    )
+    );
 }
-
-// export function getServerSideProps() {
-//     const dataTitleList = Object.keys(mockData).map()
-
-//     return {
-//         props: {
-        
-//         }
-//     }
-// }
