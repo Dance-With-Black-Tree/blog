@@ -3,7 +3,7 @@ export interface iPost {
     "date": string,
     "title": string,
     "subtitle": string,
-    "mainImg"?: string,
+    "mainImg": string,
 }
 
 export const mockData : iPost[] = [
@@ -19,6 +19,7 @@ export const mockData : iPost[] = [
         "date": "Sat Dec 03 2022 18:41:43 GMT+0900",
         "title": "타입스크립트의 Utility Types",
         "subtitle": "타입스크립트에서 자주 사용되는 유틸리티 타입",
+        "mainImg": "/img/utility-types.jpg"
     },
     {
         "id": "core-js-data-type",

@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
+                <link rel="shortcut icon" href="/img/logo.jpeg" />
                 <title>검은나무 블로그</title>
             </Head>
             <Component {...pageProps} />
