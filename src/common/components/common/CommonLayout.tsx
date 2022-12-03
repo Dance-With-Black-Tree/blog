@@ -7,7 +7,7 @@ interface ICommonLayoutProps {
 
 export default function CommonLayout({children}: ICommonLayoutProps) {
     return (
-        <div>
+        <div className={"max-w-5xl m-auto px-10"}>
             <GlobalNavigationBar/>
             {children}
             <Footer/>

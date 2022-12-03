@@ -10,12 +10,11 @@ export default function PostIndex() {
     return (
         <CommonLayout>
             <div>
-                <h1>POSTS</h1>
-                <h2>여기 설명</h2>
-                <SearchBar/>
-                <div>
-                    글목록
-                    <PostList/>
+                <h1 className="text-3xl font-bold">Posts</h1>
+                <h2 className="text-xl font-light">검은나무가 써 놓은 글들</h2>
+                <SearchBar onChange={()=>{}} searchWord={""}/>
+                <div className="my-14">
+                    <PostList />
 
                 </div>
             </div>
